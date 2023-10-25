@@ -46,7 +46,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
       padding: EdgeInsetsDirectional.fromSTEB(8.0, 4.0, 8.0, 0.0),
       child: Card(
         clipBehavior: Clip.antiAliasWithSaveLayer,
-        color: FlutterFlowTheme.of(context).dark900,
+        color: Color(0xFF000900),
         elevation: 3.0,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8.0),
@@ -121,7 +121,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                     ),
                     prefixIcon: Icon(
                       Icons.search_rounded,
-                      color: FlutterFlowTheme.of(context).grayIcon,
+                      color: FlutterFlowTheme.of(context).secondaryText,
                     ),
                     suffixIcon: _model.textController!.text.isNotEmpty
                         ? InkWell(
@@ -131,7 +131,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                             },
                             child: Icon(
                               Icons.clear,
-                              color: FlutterFlowTheme.of(context).grayIcon,
+                              color: FlutterFlowTheme.of(context).secondaryText,
                               size: 16.0,
                             ),
                           )

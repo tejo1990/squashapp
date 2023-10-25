@@ -87,7 +87,7 @@ class _ChatDetailsWidgetState extends State<ChatDetailsWidget> {
           width: 100.0,
           height: 100.0,
           decoration: BoxDecoration(
-            color: FlutterFlowTheme.of(context).dark900,
+            color: Color(0xFF080707),
           ),
           child: StreamBuilder<UsersRecord>(
             stream: UsersRecord.getDocument(widget.chatUser!.reference),
@@ -122,7 +122,7 @@ class _ChatDetailsWidgetState extends State<ChatDetailsWidget> {
                           buttonSize: 48.0,
                           icon: Icon(
                             Icons.close_rounded,
-                            color: FlutterFlowTheme.of(context).grayIcon,
+                            color: Color(0xFF605F5F),
                             size: 30.0,
                           ),
                           onPressed: () async {
@@ -354,7 +354,7 @@ class _ChatDetailsWidgetState extends State<ChatDetailsWidget> {
                       FlutterFlowTheme.of(context).primaryBackground,
                   timeDisplaySetting: TimeDisplaySetting.visibleOnTap,
                   currentUserBoxDecoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).dark900,
+                    color: Color(0xFF435EC7),
                     border: Border.all(
                       color: Colors.transparent,
                     ),

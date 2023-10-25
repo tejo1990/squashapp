@@ -305,8 +305,8 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Inter',
-                                      color:
-                                          FlutterFlowTheme.of(context).grayIcon,
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
                                     ),
                               ),
                             ),
@@ -597,7 +597,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                   boxShadow: [
                                     BoxShadow(
                                       color: FlutterFlowTheme.of(context)
-                                          .background,
+                                          .primaryBackground,
                                       offset: Offset(0.0, 1.0),
                                     )
                                   ],
@@ -676,8 +676,8 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                     .secondaryBackground,
                                 boxShadow: [
                                   BoxShadow(
-                                    color:
-                                        FlutterFlowTheme.of(context).background,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryBackground,
                                     offset: Offset(0.0, 1.0),
                                   )
                                 ],
