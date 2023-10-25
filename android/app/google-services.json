@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "250297510378",
+    "project_id": "shsquash-33abe",
+    "storage_bucket": "shsquash-33abe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:250297510378:android:061baf100f8601d7f7aa93",
+        "android_client_info": {
+          "package_name": "com.flutterflow.shsquash"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDh4EeJ09UWoGC9mc5H7aGrRBNhALSiPuA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:250297510378:android:790ddc2ac2d19d70f7aa93",
+        "android_client_info": {
+          "package_name": "sehwa.squash.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDh4EeJ09UWoGC9mc5H7aGrRBNhALSiPuA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
