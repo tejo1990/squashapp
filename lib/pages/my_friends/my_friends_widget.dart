@@ -134,10 +134,10 @@ class _MyFriendsWidgetState extends State<MyFriendsWidget> {
                             width: MediaQuery.sizeOf(context).width * 0.95,
                             height: 70.0,
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context).dark900,
+                              color: Color(0xFF000900),
                               boxShadow: [
                                 BoxShadow(
-                                  color: FlutterFlowTheme.of(context).dark900,
+                                  color: Color(0xFF000900),
                                   offset: Offset(0.0, 1.0),
                                 )
                               ],

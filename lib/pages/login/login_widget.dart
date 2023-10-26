@@ -54,7 +54,7 @@ class _LoginWidgetState extends State<LoginWidget> {
 
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).dark900,
+      backgroundColor: Color(0xFF000900),
       body: Align(
         alignment: AlignmentDirectional(-0.14, -0.08),
         child: Container(
@@ -228,7 +228,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                               _model.passwordVisibility
                                   ? Icons.visibility_outlined
                                   : Icons.visibility_off_outlined,
-                              color: FlutterFlowTheme.of(context).grayDark,
+                              color: FlutterFlowTheme.of(context).alternate,
                               size: 24.0,
                             ),
                           ),
@@ -344,7 +344,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: FlutterFlowTheme.of(context).dark900,
+                      color: Color(0xFF000900),
                       textStyle: FlutterFlowTheme.of(context).titleSmall,
                       elevation: 0.0,
                       borderSide: BorderSide(

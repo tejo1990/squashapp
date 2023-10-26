@@ -50,7 +50,7 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
 
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).dark900,
+      backgroundColor: Color(0xFF000900),
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
         automaticallyImplyLeading: false,
