@@ -26,6 +26,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   auto_size_text: 3.0.0
+  badges: 2.0.2
   cached_network_image: 3.2.1
   cloud_firestore: 4.8.0
   cloud_firestore_platform_interface: 5.15.0
@@ -86,6 +87,7 @@ dependencies:
   sign_in_with_apple_web: 1.0.1
   sqflite: 2.2.6
   stream_transform: 2.1.0
+  table_calendar: 3.0.9
   timeago: 3.2.2
   url_launcher: 6.1.10
   url_launcher_android: 6.0.27
@@ -104,7 +106,9 @@ dependencies:
 
 dev_dependencies:
   flutter_launcher_icons: 0.13.1
+  flutter_lints: 3.0.0
   image: 4.0.17
+  lints: 3.0.0
 
   flutter_test:
     sdk: flutter
