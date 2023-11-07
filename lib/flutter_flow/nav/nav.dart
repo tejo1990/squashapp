@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import '/backend/backend.dart';
+import '/backend/schema/structs/index.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
@@ -125,13 +126,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'chatMain',
-          path: '/chatMain',
-          builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'chatMain')
-              : ChatMainWidget(),
-        ),
-        FFRoute(
           name: 'changePassword',
           path: '/changePassword',
           builder: (context, params) => ChangePasswordWidget(),
@@ -156,6 +150,35 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             userPhoto: params.getParam(
                 'userPhoto', ParamType.DocumentReference, false, ['users']),
           ),
+        ),
+        FFRoute(
+          name: 'openChat',
+          path: '/openChat',
+          builder: (context, params) => OpenChatWidget(
+            openchatRef: params.getParam('openchatRef',
+                ParamType.DocumentReference, false, ['open_chat']),
+          ),
+        ),
+        FFRoute(
+          name: 'chatPreview',
+          path: '/chatPreview',
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'chatPreview')
+              : ChatPreviewWidget(),
+        ),
+        FFRoute(
+          name: 'sehwaCalendar',
+          path: '/sehwaCalendar',
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'sehwaCalendar')
+              : SehwaCalendarWidget(),
+        ),
+        FFRoute(
+          name: 'bulletinBoard',
+          path: '/bulletinBoard',
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'bulletinBoard')
+              : BulletinBoardWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -336,11 +359,11 @@ class FFRoute {
               : builder(context, ffParams);
           final child = appStateNotifier.loading
               ? Container(
-                  color: Colors.transparent,
+                  color: FlutterFlowTheme.of(context).success,
                   child: Center(
                     child: Image.asset(
-                      'assets/images/splash@2x.png',
-                      width: MediaQuery.sizeOf(context).width * 1.0,
+                      'assets/images/sehwa_logo-removebg-preview.png',
+                      height: MediaQuery.sizeOf(context).height * 1.0,
                       fit: BoxFit.fitWidth,
                     ),
                   ),

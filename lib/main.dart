@@ -1,3 +1,4 @@
+import 'package:provider/provider.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +23,13 @@ void main() async {
 
   await FlutterFlowTheme.initialize();
 
-  runApp(MyApp());
+  final appState = FFAppState(); // Initialize FFAppState
+  await appState.initializePersistedState();
+
+  runApp(ChangeNotifierProvider(
+    create: (context) => appState,
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends StatefulWidget {
@@ -114,7 +121,7 @@ class NavBarPage extends StatefulWidget {
 
 /// This is the private State class that goes with NavBarPage.
 class _NavBarPageState extends State<NavBarPage> {
-  String _currentPageName = 'chatMain';
+  String _currentPageName = 'sehwaCalendar';
   late Widget? _currentPage;
 
   @override
@@ -127,7 +134,9 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
-      'chatMain': ChatMainWidget(),
+      'bulletinBoard': BulletinBoardWidget(),
+      'sehwaCalendar': SehwaCalendarWidget(),
+      'chatPreview': ChatPreviewWidget(),
       'myProfile': MyProfileWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
@@ -149,14 +158,29 @@ class _NavBarPageState extends State<NavBarPage> {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.chat_bubble_outline,
+              Icons.notifications_rounded,
+              size: 30.0,
+            ),
+            label: 'BulletinBoard',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.calendar_today,
               size: 24.0,
             ),
             activeIcon: Icon(
-              Icons.chat_bubble_rounded,
-              size: 24.0,
+              Icons.date_range_rounded,
+              size: 32.0,
             ),
-            label: '',
+            label: '일정',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.chat_bubble_outline_rounded,
+            ),
+            label: '수다방',
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -168,7 +192,7 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.account_circle_rounded,
               size: 24.0,
             ),
-            label: '',
+            label: '프로필',
             tooltip: '',
           )
         ],

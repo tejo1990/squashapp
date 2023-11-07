@@ -27,6 +27,8 @@ class _FriendListWidgetState extends State<FriendListWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => FriendListModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -38,6 +40,8 @@ class _FriendListWidgetState extends State<FriendListWidget> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return Padding(
       padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 1.0),
       child: Row(
@@ -76,7 +80,7 @@ class _FriendListWidgetState extends State<FriendListWidget> {
                           shape: BoxShape.circle,
                         ),
                         child: Image.asset(
-                          'assets/images/user_4@2x.png',
+                          'assets/images/6qkhc_.jpg',
                         ),
                       ),
                     ],
@@ -91,7 +95,7 @@ class _FriendListWidgetState extends State<FriendListWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Text(
-                            'Alex Edwards',
+                            '세화인들의 방',
                             style: FlutterFlowTheme.of(context)
                                 .titleMedium
                                 .override(
@@ -109,7 +113,7 @@ class _FriendListWidgetState extends State<FriendListWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 4.0, 4.0, 0.0),
                               child: Text(
-                                '[userEmail]',
+                                'Sewha Squash',
                                 style: FlutterFlowTheme.of(context)
                                     .bodySmall
                                     .override(

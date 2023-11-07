@@ -9,6 +9,20 @@
           "arrayConfig": "CONTAINS"
         },
         {
+          "fieldPath": "last_message_sent_by",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "chats",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "users",
+          "arrayConfig": "CONTAINS"
+        },
+        {
           "fieldPath": "last_message_time",
           "order": "DESCENDING"
         }
